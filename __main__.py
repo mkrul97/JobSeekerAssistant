@@ -1,22 +1,8 @@
-import Scraper
 from DataManager import DataManager
 from TagsModule import TagsModule
 from UrlsModule import UrlsModule
 import tkinter as tk
-
-def scrape(tags, urls):
-    result = {}
-
-    for url in urls:    
-        ws = Scraper.WebScraper(headless=True)
-        links = ws.scrape(url, tags)
-
-        for key, value in links.items():
-            
-            result.update({key: value})
-    
-    for key, value in result.items():
-        print(key.replace("\n", "") + ": " + value)
+import Output
 
 if __name__ == "__main__":
 
@@ -24,19 +10,27 @@ if __name__ == "__main__":
 
     root = tk.Tk()
     root.title("Job Seeker Assistant")
-    root.geometry("800x600")
+    root.geometry("360x400")
+    root.resizable(False, False)
 
     main_frame = tk.Frame(root)
     main_frame.pack()
 
-    tags_module = TagsModule(main_frame)
+    tags_frame = tk.Frame(main_frame)
+    tags_frame.pack(pady=10)
+    tags_module = TagsModule(tags_frame)
 
-    urls_module = UrlsModule(main_frame)
+    urls_frame = tk.Frame(main_frame)
+    urls_frame.pack(pady=10)
+    urls_module = UrlsModule(urls_frame)
 
-    save_button = tk.Button(text="Save", command=lambda: data_manager.save_data(tags_module.return_tags(), urls_module.return_urls()))
-    save_button.pack()
+    buttons_frame = tk.Frame(main_frame)
+    buttons_frame.pack()
 
-    scraper_button = tk.Button(text="Find Jobs", command=lambda: scrape(tags_module.return_tags(), urls_module.return_urls()))
-    scraper_button.pack()
+    scraper_button = tk.Button(buttons_frame, text="Find Jobs", command=lambda: Output.OutputWindow(tags_module.return_tags(), urls_module.return_urls()))
+    scraper_button.pack(side=tk.RIGHT, padx=5)
+
+    save_button = tk.Button(buttons_frame, text="Save", command=lambda: data_manager.save_data(tags_module.return_tags(), urls_module.return_urls()))
+    save_button.pack(side=tk.RIGHT, padx=5)
 
     root.mainloop()

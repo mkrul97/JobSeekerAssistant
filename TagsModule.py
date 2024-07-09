@@ -23,7 +23,7 @@ class TagsModule:
 
     def add_tag(self):
         if len(self.tag_inputs) < 5:
-            tag_input = tk.Entry(self.tags_frame)
+            tag_input = tk.Entry(self.tags_frame, width=10)
             tag_input.pack(side=tk.LEFT)
             self.tag_inputs.append(tag_input)
             self.reposition_buttons()

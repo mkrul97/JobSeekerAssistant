@@ -29,10 +29,10 @@ class UrlsModule:
         self.add_url()
 
         self.add_button = ttk.Button(root, text="Add URL", command=lambda: self.add_url())
-        self.add_button.pack(side=tk.LEFT, padx=5, pady= 5)
+        self.add_button.pack(padx=5, pady= 5)
 
         self.remove_button = ttk.Button(root, text="Remove URL", command=lambda: self.remove_url())
-        self.remove_button.pack(side=tk.LEFT, padx=5, pady= 5)
+        self.remove_button.pack(padx=5, pady= 5)
 
         self.populate_urls()
 
