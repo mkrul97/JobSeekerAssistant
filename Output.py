@@ -4,9 +4,10 @@ import webbrowser
 import Scraper
 
 class OutputWindow:
+    # Displaying a popup window with hyperlinks to the found job offers
     def __init__(self, tags, urls):
         
-        self.job_offers = {}
+        self.job_offers = {}  # Storing the job title and link to the offer
         self.tags = tags
         self.urls = urls
 
@@ -15,7 +16,8 @@ class OutputWindow:
 
         self.get_job_offers()
         self.print_job_offers()
-        
+    
+    # Retrieving job offers from links provided by the user and adding them to the dictionary
     def get_job_offers(self):
         
         for url in self.urls:    
@@ -25,8 +27,10 @@ class OutputWindow:
             for key, value in links.items():
                 
                 self.job_offers.update({key: value})
-            
+
+    # Displaying job titles as headers with hyperlinks to the offers and separators between them      
     def print_job_offers(self):
+        
         header_font = font.Font(family="Helvetica", size=12, weight="bold")
         link_font = font.Font(family="Helvetica", size=11)
         separator_font = font.Font(family="Helvetica", size=9)
