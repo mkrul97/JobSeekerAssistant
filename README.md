@@ -54,4 +54,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Disclaimer
 
-**Disclaimer**: Some websites may prohibit or restrict automated scraping of their content. It is recommended to review and comply with the terms of service of each website before using this tool for scraping.
+Some websites may prohibit or restrict automated scraping of their content. It is recommended to review and comply with the terms of service of each website before using this tool for scraping.
