@@ -14,6 +14,13 @@ Job Seeker Assistant is a Python application that helps users search for job off
 - Selenium
 - BeautifulSoup
 - tkinter
+- Standard Python Libraries:
+   - json
+   - os
+   - webbrowser
+   - urllib.parse
+   - time
+   - re
 
 ## How to Use
 
