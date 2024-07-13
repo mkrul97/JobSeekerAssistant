@@ -46,6 +46,8 @@ Job Seeker Assistant is a Python application that helps users search for job off
 
 - **Website Compatibility**: Some websites may not be compatible with the application due to their specific structure, anti-scraping measures, or terms of service prohibiting automated access to their content.
 
+- **Application Unresponsiveness**: When starting the scraping process, the application may become unresponsive until the job is done. This is due to the nature of the scraping tasks being performed synchronously. 
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
