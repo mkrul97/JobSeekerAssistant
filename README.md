@@ -25,7 +25,7 @@ Job Seeker Assistant is a Python application that helps users search for job off
    cd JobSeekerAssistant
    ```
 
-3. Install dependencies (if any) using:
+3. Install dependencies using:
    ```
    pip install -r requirements.txt
    ```
