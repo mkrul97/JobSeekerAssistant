@@ -48,7 +48,7 @@ Job Seeker Assistant is a Python application that helps users search for job off
    - Add up to 5 tags to specify job types or categories.
    - Add up to 20 websites URLs where job offers should be searched.
    - Save your search details for later use.
-   - Press 'Start' to initiate the job search.
+   - Press 'Find Jobs' to initiate the job search.
    - Wait until the output window displays the results.
 
 ## Known Issues
